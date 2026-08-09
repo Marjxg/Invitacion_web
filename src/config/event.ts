@@ -25,4 +25,9 @@ export const EVENT = {
         ],
         mapsUrl: process.env.NEXT_PUBLIC_RECEPTION_MAPS_URL ?? "#",
     },
+
+    data: {
+        name: process.env.NEXT_PUBLIC_EVENT_NAME ?? "",
+        title: process.env.NEXT_PUBLIC_EVENT_TITLE ?? "",
+    }
 };
