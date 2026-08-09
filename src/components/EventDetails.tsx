@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { EVENT } from "@/config/event";
 
 /* ------------------------------------------------------------------ */
 /*  Hook: revela un elemento con fade + desplazamiento al hacer scroll */
@@ -210,19 +211,19 @@ export default function EventDetails() {
 
                     <div className="mt-5 flex flex-col items-center">
                         <span className="font-serif text-[5.25rem] leading-[0.85] text-violet-900/40 sm:text-8xl">
-                            03
+                            {EVENT.date.day}
                         </span>
 
                         <div className="mt-2 flex items-center gap-3">
                             <span className="h-px w-9 bg-violet-300" />
                             <span className="font-serif text-lg uppercase tracking-[0.35em] text-stone-600 sm:text-xl">
-                                Octubre
+                                {EVENT.date.month}
                             </span>
                             <span className="h-px w-9 bg-violet-300" />
                         </div>
 
                         <span className="mt-1 font-serif text-2xl tracking-[0.3em] text-stone-400">
-                            2026
+                            {EVENT.date.year}
                         </span>
                     </div>
                 </div>
@@ -233,9 +234,9 @@ export default function EventDetails() {
                     icon={<ChurchIcon className="h-full w-full" />}
                     eyebrow="Ceremonia religiosa"
                     title="Santa Misa"
-                    time="5:30 PM – 6:30 PM"
-                    place={["Parroquia de Nuestra Señora", "del Perpetuo Socorro"]}
-                    mapsUrl="https://maps.google.com/?q=PLACEHOLDER_CEREMONIA"
+                    time={EVENT.ceremony.time}
+                    place={EVENT.ceremony.place}
+                    mapsUrl={EVENT.ceremony.mapsUrl}
                     accent="violet"
                 />
 
@@ -245,9 +246,9 @@ export default function EventDetails() {
                     icon={<CelebrationIcon className="h-full w-full" />}
                     eyebrow="Recepción"
                     title="Fiesta de celebración"
-                    time="7:00 PM – 12:00 AM"
-                    place={["Club Español", "Salón El Pimentón"]}
-                    mapsUrl="https://maps.google.com/?q=PLACEHOLDER_RECEPCION"
+                    time={EVENT.reception.time}
+                    place={EVENT.reception.place}
+                    mapsUrl={EVENT.reception.mapsUrl}
                     accent="rose"
                 />
             </div>
