@@ -108,7 +108,7 @@ function VineJoint({ className = "" }: { className?: string }) {
     return (
         <div className={`flex flex-col items-center ${className}`}>
             <span className="w-px h-8 bg-linear-to-b from-violet-200 to-violet-300" />
-            <FlowerDecor className="w-6 h-6 text-rose-300 -my-1" />
+            {/* <FlowerDecor className="w-6 h-6 text-green-700/40 -my-1" /> */}
             <span className="w-px h-8 bg-linear-to-b from-violet-300 to-violet-200" />
         </div>
     );
@@ -199,11 +199,14 @@ export default function EventDetails() {
     return (
         <section className="relative w-full overflow-hidden bg-linear-to-b from-violet-100/90 via-stone-200 to-violet-100/90 px-5 py-20 sm:px-8">
             {/* flores decorativas de fondo */}
-            <FlowerDecor className="pointer-events-none absolute -left-6 top-1 h-24 w-24 -rotate-12 text-rose-700/10 sm:h-28 sm:w-28" />
-            <FlowerDecor className="pointer-events-none absolute -right-8 top-24 h-28 w-28 rotate-18 text-violet-900/20 sm:h-32 sm:w-32" />
-            <FlowerDecor className="pointer-events-none absolute -left-2 top-64 h-28 w-28 rotate-18 text-cyan-700/20 sm:h-32 sm:w-32" />
-            <FlowerDecor className="pointer-events-none absolute right-1/2 bottom-1/3 h-24 w-24 -translate-x-1/2 rotate-6 text-emerald-700/10" />
-            <FlowerDecor className="pointer-events-none absolute -bottom-8 -right-16 h-24 w-24 -translate-x-1/2 rotate-6 text-amber-500/30" />
+            <FlowerDecor className="pointer-events-none absolute -left-6 top-1 h-24 w-24 -rotate-12 text-violet-900/20 sm:h-28 sm:w-28" />
+            <FlowerDecor className="pointer-events-none absolute -right-8 top-24 h-28 w-28 rotate-14 text-violet-900/6 sm:h-32 sm:w-32" />
+            <FlowerDecor className="pointer-events-none absolute -left-2 top-64 h-28 w-28 rotate-18 text-violet-900/8 sm:h-32 sm:w-32" />
+            <FlowerDecor className="pointer-events-none absolute -right-1 top-84 h-28 w-28 rotate-20 text-violet-900/20 sm:h-32 sm:w-32" />
+            <FlowerDecor className="pointer-events-none absolute right-1/2 bottom-1/3 h-24 w-24 -translate-x-1/2 rotate-12 text-violet-900/15" />
+            <FlowerDecor className="pointer-events-none absolute -right-10 bottom-1/4 h-12 w-12 -translate-x-1/2 rotate-6 text-violet-900/30" />
+            <FlowerDecor className="pointer-events-none absolute bottom-14 left-1/16 h-12 w-12 -translate-x-1/2 rotate-20 text-violet-900/20" />
+            <FlowerDecor className="pointer-events-none absolute -bottom-8 left-2/3 h-28 w-28 -translate-x-1/2 rotate-6 text-violet-900/10" />
 
             <div className="relative mx-auto flex max-w-md flex-col items-center">
 
