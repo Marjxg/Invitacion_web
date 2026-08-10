@@ -30,5 +30,6 @@ export const EVENT = {
     data: {
         name: process.env.NEXT_PUBLIC_EVENT_NAME ?? "",
         title: process.env.NEXT_PUBLIC_EVENT_TITLE ?? "",
+        message: process.env.NEXT_PUBLIC_EVENT_MESSAGE ?? ""
     }
 };
