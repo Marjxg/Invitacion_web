@@ -9,6 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
+    "animejs": "^4.5.0",
+    "lottie-react": "^2.4.1",
     "next": "16.3.0",
     "react": "19.2.8",
     "react-dom": "19.2.8"
