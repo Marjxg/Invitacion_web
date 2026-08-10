@@ -2,6 +2,7 @@ import EventDetails from "@/components/EventDetails";
 import SaveTheDate from "@/components/SaveTheDate";
 import MusicPlayer from "@/components/MusicPlayer";
 import Countdown from "@/components/Countdown";
+import DressCode from "@/components/DressCode";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <SaveTheDate />
       <EventDetails />
       <Countdown />
+      <DressCode />
     </main>
   );
 }
