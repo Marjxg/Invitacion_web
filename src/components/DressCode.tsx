@@ -135,7 +135,7 @@ export default function DressCode() {
                     <span className="h-px w-9 bg-violet-300" />
                 </div>
 
-                <div className="mt-4 flex items-end justify-center gap-1 sm:gap-2">
+                <div className="flex items-end justify-center gap-1 sm:gap-2">
                     <GarmentFigure
                         src="/img/dress-code.png"
                         alt="Vestido formal de dama"
