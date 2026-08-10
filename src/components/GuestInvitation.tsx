@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import ButterflyAnimation from "@/components/animations/Butterfly";
-import InvitationAnimation from "@/components/animations/Invitation";
 import 'animate.css';
 
 function useReveal<T extends HTMLElement>(threshold = 0.25) {
@@ -90,10 +89,6 @@ export default function GuestInvitation({
 
       <ButterflyAnimation
         className="-left-10 top-44 h-28 w-28 opacity-75"
-      />
-
-      <InvitationAnimation
-        className="left-2 bottom-0 h-28 w-28 opacity-75"
       />
 
       <div ref={ref} className={`relative mx-auto max-w-sm ${revealClass(visible)}`}>

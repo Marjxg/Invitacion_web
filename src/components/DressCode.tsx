@@ -122,14 +122,6 @@ export default function DressCode() {
 
     return (
         <section className="relative w-full overflow-hidden bg-linear-to-b from-violet-100/90 via-stone-200 to-violet-100/90 px-5 py-20 sm:px-8">
-            <FlowerDecor className="pointer-events-none absolute -left-6 top-1 h-24 w-24 -rotate-12 text-violet-900/20 sm:h-28 sm:w-28" />
-            <FlowerDecor className="pointer-events-none absolute -right-8 top-24 h-28 w-28 rotate-14 text-violet-900/6 sm:h-32 sm:w-32" />
-            <FlowerDecor className="pointer-events-none absolute -left-2 top-64 h-28 w-28 rotate-18 text-violet-900/8 sm:h-32 sm:w-32" />
-            <FlowerDecor className="pointer-events-none absolute -right-1 top-84 h-28 w-28 rotate-20 text-violet-900/10 sm:h-32 sm:w-32" />
-            <FlowerDecor className="pointer-events-none absolute -right-10 bottom-8 h-12 w-12 -translate-x-1/2 rotate-6 text-violet-900/30" />
-            <FlowerDecor className="pointer-events-none absolute bottom-1 left-1/16 h-12 w-12 -translate-x-1/2 rotate-20 text-violet-900/20" />
-            <FlowerDecor className="pointer-events-none absolute bottom-16 left-3/6 h-28 w-28 -translate-x-1/2 rotate-6 text-violet-900/10" />
-
             <div ref={ref} className={`relative mx-auto max-w-sm ${revealClass(visible)}`}>
                 <p className="text-center text-[0.65rem] font-medium uppercase tracking-[0.4em] text-violet-400">
                     Código de vestimenta
@@ -143,18 +135,18 @@ export default function DressCode() {
                     <span className="h-px w-9 bg-violet-300" />
                 </div>
 
-                <div className="mt-10 flex items-end justify-center gap-4 sm:gap-8">
+                <div className="mt-4 flex items-end justify-center gap-1 sm:gap-2">
                     <GarmentFigure
-                        src="/img/dress-code-woman.png"
+                        src="/img/dress-code.png"
                         alt="Vestido formal de dama"
                         blobClass="bg-gradient-to-br from-rose-100/70 to-violet-100/50"
                     />
 
-                    <GarmentFigure
+                    {/* <GarmentFigure
                         src="/img/dress-code-man.png"
                         alt="Traje formal de caballero"
                         blobClass="bg-gradient-to-bl from-violet-100/60 to-stone-100/60"
-                    />
+                    /> */}
                 </div>
 
                 <div className="mt-10 flex justify-center">

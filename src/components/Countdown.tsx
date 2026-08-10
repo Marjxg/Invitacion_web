@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { EVENT } from "@/config/event";
+import InvitationAnimation from "@/components/animations/Invitation";
 
 function useReveal<T extends HTMLElement>(threshold = 0.25) {
     const ref = useRef<T | null>(null);
@@ -107,6 +108,10 @@ export default function Countdown() {
 
     return (
         <section className="relative w-full overflow-hidden bg-violet-400/40 px-5 py-20 sm:px-8">
+
+            <InvitationAnimation
+                className="right-0 top-0 h-28 w-28 opacity-75"
+            />
 
             <div ref={ref} className={`relative mx-auto max-w-sm ${revealClass(visible)}`}>
                 <p className="text-center text-[0.65rem] font-medium uppercase tracking-[0.4em] text-violet-100">
