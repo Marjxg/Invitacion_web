@@ -1,12 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
+import ButterflyAnimation from "@/components/animations/Butterfly";
+import Flower from "@/components/animations/Flower";
+import 'animate.css';
 
-/* ------------------------------------------------------------------ */
-/*  Hook: revela un elemento con fade + desplazamiento al hacer scroll */
-/*  (mismo comportamiento y timing que en EventDetails)                */
-/* ------------------------------------------------------------------ */
 function useReveal<T extends HTMLElement>(threshold = 0.25) {
     const ref = useRef<T | null>(null);
     const [visible, setVisible] = useState(false);
@@ -43,25 +41,24 @@ function revealClass(visible: boolean) {
 function HeartDay({ day }: { day: number }) {
     return (
         <span className="relative flex h-9 w-9 items-center justify-center">
-            <svg
-                viewBox="0 0 32 29"
-                className="absolute h-9 w-9 text-violet-200 drop-shadow-[0_2px_5px_rgba(139,92,246,0.25)]"
-                fill="currentColor"
-                aria-hidden="true"
-            >
-                <path d="M16 27S2 18.6 2 9.2C2 4.8 5.2 2 9 2c3 0 5.5 1.7 7 4.2C17.5 3.7 20 2 23 2c3.8 0 7 2.8 7 7.2C30 18.6 16 27 16 27Z" />
-            </svg>
+            <span className="animate__animated animate__pulse animate__infinite relative flex h-9 w-9 items-center justify-center">
+                <svg
+                    viewBox="0 0 32 29"
+                    className="absolute h-9 w-9 text-rose-200 drop-shadow-[0_2px_5px_rgba(139,92,246,0.25)]"
+                    fill="currentColor"
+                    aria-hidden="true"
+                >
+                    <path d="M16 27S2 18.6 2 9.2C2 4.8 5.2 2 9 2c3 0 5.5 1.7 7 4.2C17.5 3.7 20 2 23 2c3.8 0 7 2.8 7 7.2C30 18.6 16 27 16 27Z" />
+                </svg>
 
-            <span className="relative z-10 -translate-y-0.5 font-serif text-sm font-semibold text-violet-900 sm:text-base">
-                {day}
+                <span className="relative z-10 -translate-y-0.5 font-serif text-sm font-semibold text-violet-900 sm:text-base">
+                    {day}
+                </span>
             </span>
         </span>
     );
 }
 
-/* ------------------------------------------------------------------ */
-/*  Datos estáticos                                                   */
-/* ------------------------------------------------------------------ */
 const WEEKDAYS = ["D", "L", "M", "M", "J", "V", "S"];
 
 const WEEKS: (number | null)[][] = [
@@ -74,27 +71,30 @@ const WEEKS: (number | null)[][] = [
 
 const HIGHLIGHT_DAY = 3;
 
-/* ------------------------------------------------------------------ */
-/*  Componente principal                                              */
-/* ------------------------------------------------------------------ */
 export default function SaveTheDate() {
     const { ref, visible } = useReveal<HTMLDivElement>();
 
     return (
-        <section className="relative w-full overflow-hidden bg-linear-to-b from-orange-100/90 via-rose-50/90 to-violet-100/90 px-5 py-20 sm:px-8">
+        <section className="relative w-full overflow-hidden bg-violet-400/50 px-5 py-20 sm:px-8">
+            <ButterflyAnimation
+                className="-left-12 bottom-2 h-40 w-40"
+            />
+
+            <ButterflyAnimation
+                className="-right-14 top-0 h-36 w-36 scale-x-[-1]"
+            />
+
+            <ButterflyAnimation
+                className="-left-10 top-44 h-28 w-28 opacity-75"
+            />
+
+            <Flower
+                className="-right-8 bottom-0 h-35 w-35"
+            />
+
             <div ref={ref} className={`relative mx-auto max-w-sm ${revealClass(visible)}`}>
 
-                <div className="relative rounded-[2.25rem] border border-violet-100 bg-white/80 text-center shadow-[0_10px_35px_-15px_rgba(139,92,246,0.3)] backdrop-blur-sm sm:px-9">
-                    <div className="relative -mt-2 h-48 sm:h-32">
-                        <Image
-                            src="/img/flowers.png"
-                            alt="Decoración floral"
-                            fill
-                            priority={false}
-                            className="object-cover"
-                        />
-                    </div>
-
+                <div className="relative rounded-[2.25rem] border border-violet-100 bg-white text-center shadow-[0_10px_35px_-15px_rgba(139,92,246,0.3)] backdrop-blur-sm sm:px-9">
                     <div className=" px-6 pb-10 pt-8">
                         <p className="font-serif text-2xl tracking-[0.15em] text-stone-700 sm:text-3xl">
                             SAVE{" "}
