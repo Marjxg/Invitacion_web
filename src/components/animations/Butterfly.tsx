@@ -6,7 +6,6 @@ import butterflyAnimation from "@/animations/butterfly.json";
 interface ButterflyAnimationProps {
   className?: string;
   delay?: number;
-  speed?: number;
 }
 
 export default function ButterflyAnimation({

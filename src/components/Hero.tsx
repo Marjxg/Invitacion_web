@@ -49,18 +49,22 @@ export default function Hero() {
                     {EVENT.data.name}
                 </p>
 
-                <div className="flex flex-col items-center text-center mt-6">
-                    <p className="font-script -mb-8 text-3xl leading-none text-violet-900/70 sm:text-4xl md:text-5xl animate__animated animate__fadeIn">
+                <div className="flex flex-col items-center">
+                    {/* <span className="font-script text-[1.5rem] leading-[0.85] text-violet-900/40 sm:text-4xl">
                         Mis
-                    </p>
+                    </span> */}
 
-                    <span className="font-serif text-[6.5rem] pb-1 leading-none bg-linear-to-r from-lime-200/10 via-violet-900 to-lime-200/10 bg-clip-text text-transparent sm:text-[8rem] md:text-[9rem] animate__animated animate__fadeIn">
-                        15
-                    </span>
+                    <div className="mt-2 flex items-center gap-3">
+                        <span className="h-px w-9 bg-violet-300" />
+                        <span className="font-serif text-8xl pb-1 uppercase bg-linear-to-r from-lime-200/10 via-violet-900 to-lime-200/10 bg-clip-text text-transparent">
+                            15
+                        </span>
+                        <span className="h-px w-9 bg-violet-300" />
+                    </div>
 
-                    <p className="font-script text-3xl leading-none text-violet-900/70 sm:text-4xl md:text-5xl animate__animated animate__fadeIn">
+                    <span className="mt-1 font-script text-[1.5rem] text-violet-900/40 sm:text-4xl">
                         años
-                    </p>
+                    </span>
                 </div>
 
                 <div className="relative mt-10 mx-auto max-w-76 -rotate-1 rounded-[1.4rem_1.6rem_1.3rem_1.5rem/1.7rem_1.3rem_1.6rem_1.4rem] border border-amber-100 bg-amber-50/70 px-6 py-6 shadow-[0_8px_24px_-10px_rgba(120,90,60,0.25)]">
