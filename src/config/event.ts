@@ -1,7 +1,7 @@
 export const EVENT = {
     name: process.env.NEXT_PUBLIC_QUINCEANERA_NAME ?? "",
     title: process.env.NEXT_PUBLIC_EVENT_TITLE ?? "",
-    date_format: new Date("2026-10-03T17:30:00-06:00"),
+    date_format: new Date(process.env.NEXT_PUBLIC_EVENT_DATE ?? ""),
 
     date: {
         day: process.env.NEXT_PUBLIC_EVENT_DAY ?? "",
