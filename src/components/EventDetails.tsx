@@ -252,7 +252,7 @@ export default function EventDetails() {
                     time={EVENT.reception.time}
                     place={EVENT.reception.place}
                     mapsUrl={EVENT.reception.mapsUrl}
-                    accent="rose"
+                    accent="violet"
                 />
             </div>
         </section>

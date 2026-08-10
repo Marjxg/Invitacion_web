@@ -81,7 +81,7 @@ export default function SaveTheDate() {
     const { ref, visible } = useReveal<HTMLDivElement>();
 
     return (
-        <section className="relative w-full overflow-hidden bg-linear-to-b from-emerald-100/90 via-emerald-50/90 to-violet-100/90 px-5 py-20 sm:px-8">
+        <section className="relative w-full overflow-hidden bg-linear-to-b from-orange-100/90 via-rose-50/90 to-violet-100/90 px-5 py-20 sm:px-8">
             <div ref={ref} className={`relative mx-auto max-w-sm ${revealClass(visible)}`}>
 
                 <div className="relative rounded-[2.25rem] border border-violet-100 bg-white/80 text-center shadow-[0_10px_35px_-15px_rgba(139,92,246,0.3)] backdrop-blur-sm sm:px-9">
