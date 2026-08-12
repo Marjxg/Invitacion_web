@@ -208,10 +208,8 @@ export default function EventDetails() {
             <FlowerDecor className="pointer-events-none absolute bottom-14 left-1/16 h-12 w-12 -translate-x-1/2 rotate-20 text-violet-900/20" />
             <FlowerDecor className="pointer-events-none absolute -bottom-8 left-2/3 h-28 w-28 -translate-x-1/2 rotate-6 text-violet-900/10" />
 
-            <div className="relative mx-auto flex max-w-md flex-col items-center">
-
+            <div className="relative mx-auto w-full max-w-5xl">
                 <div ref={dateReveal.ref} className={revealClass(dateReveal.visible)}>
-
                     <div className="mt-5 flex flex-col items-center">
                         <span className="font-serif text-[5.25rem] leading-[0.85] text-violet-900/40 sm:text-8xl">
                             {EVENT.date.day}
@@ -231,29 +229,29 @@ export default function EventDetails() {
                     </div>
                 </div>
 
-                <VineJoint className="my-8" />
+                <VineJoint className=" lg:mb-12" />
 
-                <EventCard
-                    icon={<ChurchIcon className="h-full w-full" />}
-                    eyebrow="Ceremonia religiosa"
-                    title="Santa Misa"
-                    time={EVENT.ceremony.time}
-                    place={EVENT.ceremony.place}
-                    mapsUrl={EVENT.ceremony.mapsUrl}
-                    accent="violet"
-                />
+                <div className="grid grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-10">
+                    <EventCard
+                        icon={<ChurchIcon className="h-full w-full" />}
+                        eyebrow="Ceremonia religiosa"
+                        title="Santa Misa"
+                        time={EVENT.ceremony.time}
+                        place={EVENT.ceremony.place}
+                        mapsUrl={EVENT.ceremony.mapsUrl}
+                        accent="violet"
+                    />
 
-                <VineJoint className="my-8" />
-
-                <EventCard
-                    icon={<CelebrationIcon className="h-full w-full" />}
-                    eyebrow="Recepción"
-                    title="Fiesta de celebración"
-                    time={EVENT.reception.time}
-                    place={EVENT.reception.place}
-                    mapsUrl={EVENT.reception.mapsUrl}
-                    accent="violet"
-                />
+                    <EventCard
+                        icon={<CelebrationIcon className="h-full w-full" />}
+                        eyebrow="Recepción"
+                        title="Fiesta de celebración"
+                        time={EVENT.reception.time}
+                        place={EVENT.reception.place}
+                        mapsUrl={EVENT.reception.mapsUrl}
+                        accent="violet"
+                    />
+                </div>
             </div>
         </section>
     );

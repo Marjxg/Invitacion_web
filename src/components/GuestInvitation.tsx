@@ -2,6 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import ButterflyAnimation from "@/components/animations/Butterfly";
+import Flower from "@/components/animations/Flower";
+import FlowerGrowing from "@/components/animations/FlowerGrowing";
+import Tulip from "@/components/animations/Tulip";
 import 'animate.css';
 
 function useReveal<T extends HTMLElement>(threshold = 0.25) {
@@ -79,17 +82,19 @@ export default function GuestInvitation({
   return (
     <section className="relative w-full overflow-hidden bg-violet-400/40 px-5 py-20 sm:px-8">
 
-      <ButterflyAnimation
-        className="right-2 bottom-2 h-40 w-40"
-      />
+      <ButterflyAnimation className="-right-14 top-0 h-36 w-36 scale-x-[-1]" />
 
-      <ButterflyAnimation
-        className="-right-14 top-0 h-36 w-36 scale-x-[-1]"
-      />
+      <ButterflyAnimation className="-right-5 bottom-0 h-36 w-36 scale-x-[-1]" />
 
-      <ButterflyAnimation
-        className="-left-10 top-44 h-28 w-28 opacity-75"
-      />
+      <ButterflyAnimation className="-left-10 top-30 h-28 w-28 opacity-75" />
+
+      <Flower className="-left-8 -bottom-4 h-30 w-30 scale-x-[-1] lg:left-30 lg:opacity-60" />
+
+      <Flower className="hidden lg:block absolute right-10 -bottom-4 h-30 w-30 lg:opacity-60" />
+
+      <Tulip className="hidden lg:block absolute left-8 -bottom-2 h-28 w-28 opacity-60" />
+
+      <Tulip className="hidden lg:block absolute right-35 -bottom-2 h-28 w-28 scale-x-[-1] opacity-60" />
 
       <div ref={ref} className={`relative mx-auto max-w-sm ${revealClass(visible)}`}>
         <div className="relative rounded-4xl border border-violet-100 bg-white px-6 py-9 text-center shadow-[0_10px_32px_-14px_rgba(139,92,246,0.3)] backdrop-blur-sm sm:px-8">
@@ -112,7 +117,7 @@ export default function GuestInvitation({
           <button
             type="button"
             onClick={onConfirm}
-            style={{animationDuration: "2.5s"}}
+            style={{ animationDuration: "2.5s" }}
             className="mt-7 w-full rounded-full bg-violet-800/40 py-4 text-base font-medium tracking-wide 
             text-white shadow-[0_8px_20px_-8px_rgba(139,92,246,0.6)] transition-colors duration-300
             hover:bg-violet-400/90 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-300 

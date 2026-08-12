@@ -101,17 +101,15 @@ function GarmentFigure({
     blobClass: string;
 }) {
     return (
-        <div className="relative flex h-52 w-36 items-end justify-center sm:h-64 sm:w-44">
-            <div
-                className={`pointer-events-none absolute inset-3 -z-10 rounded-[55%_45%_60%_40%/50%_55%_45%_50%] blur-xl ${blobClass}`}
-            />
+        <div className="relative h-44 w-64 sm:h-52 sm:w-72">
+            <div className={`pointer-events-none absolute inset-3 -z-10 rounded-[55%_45%_60%_40%/50%_55%_45%_50%] blur-xl ${blobClass}`} />
 
             <Image
                 src={src}
                 alt={alt}
                 fill
-                className="object-contain object-bottom"
-                sizes="(max-width: 640px) 144px, 176px"
+                className="object-contain object-center"
+                sizes="(max-width: 640px) 256px, 288px"
             />
         </div>
     );
@@ -135,21 +133,15 @@ export default function DressCode() {
                     <span className="h-px w-9 bg-violet-300" />
                 </div>
 
-                <div className="flex items-end justify-center gap-1 sm:gap-2">
+                <div className="mt-3 flex items-center justify-center">
                     <GarmentFigure
                         src="/img/dress-code.png"
-                        alt="Vestido formal de dama"
+                        alt="Vestimenta formal"
                         blobClass="bg-gradient-to-br from-rose-100/70 to-violet-100/50"
                     />
-
-                    {/* <GarmentFigure
-                        src="/img/dress-code-man.png"
-                        alt="Traje formal de caballero"
-                        blobClass="bg-gradient-to-bl from-violet-100/60 to-stone-100/60"
-                    /> */}
                 </div>
 
-                <div className="mt-10 flex justify-center">
+                <div className="mt-3 flex justify-center">
                     <div className="flex items-center gap-3 rounded-full border border-dashed border-violet-200 bg-white/60 px-5 py-2.5 backdrop-blur-sm">
                         <p className="text-left text-xs text-stone-500 sm:text-sm">
                             Restricción de color: Violeta
