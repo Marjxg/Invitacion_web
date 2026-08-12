@@ -106,7 +106,7 @@ export default function GuestInvitation({
             Con cariño para
           </p>
 
-          <h2 className="mt-2 font-serif text-2xl leading-snug text-violet-900/80 sm:text-3xl">
+          <h2 className="mt-2 font-script text-3xl leading-snug text-violet-900 sm:text-5xl">
             {guestName}
           </h2>
 
@@ -118,7 +118,7 @@ export default function GuestInvitation({
             type="button"
             onClick={onConfirm}
             style={{ animationDuration: "2.5s" }}
-            className="mt-7 w-full rounded-full bg-violet-800/40 py-4 text-base font-medium tracking-wide 
+            className="mt-7 w-full rounded-full bg-violet-800/40 py-3 text-base font-medium tracking-wide 
             text-white shadow-[0_8px_20px_-8px_rgba(139,92,246,0.6)] transition-colors duration-300
             hover:bg-violet-400/90 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-300 
             focus-visible:ring-offset-2 sm:text-lg animate__animated animate__pulse animate__infinite"

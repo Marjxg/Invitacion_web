@@ -7,6 +7,7 @@ import MusicPlayer from "@/components/MusicPlayer";
 import Countdown from "@/components/Countdown";
 import DressCode from "@/components/DressCode";
 import GuestInvitation from "@/components/GuestInvitation";
+import FinalMessage from "@/components/FinalMessage";
 
 export default function Home() {
   const handleConfirm = () => {
@@ -26,6 +27,7 @@ export default function Home() {
         guestCount={4}
         onConfirm={handleConfirm}
       />
+      <FinalMessage />
     </main>
   );
 }
