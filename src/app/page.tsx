@@ -25,7 +25,9 @@ export default function Home() {
       <GuestInvitation
         guestName="Familia Pérez López"
         guestCount={4}
-        onConfirm={handleConfirm}
+        guestToken={"familia-perez-001"}
+        initiallyResponded={false}
+        initialConfirmedCount={null}
       />
       <FinalMessage />
     </main>
