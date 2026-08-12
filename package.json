@@ -9,6 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.12.4",
+    "@supabase/supabase-js": "^2.112.3",
     "animate.css": "^4.1.1",
     "animejs": "^4.5.0",
     "lottie-react": "^2.4.1",

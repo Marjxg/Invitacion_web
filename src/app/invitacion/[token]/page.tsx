@@ -1,4 +1,4 @@
-import { GUESTS } from "@/data/guests";
+import { supabaseServer } from "@/utils/supabase/server";
 
 import Hero from "@/components/Hero";
 import EventDetails from "@/components/EventDetails";
@@ -9,6 +9,9 @@ import DressCode from "@/components/DressCode";
 import GuestInvitation from "@/components/GuestInvitation";
 import FinalMessage from "@/components/FinalMessage";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 interface PageProps {
     params: Promise<{
         token: string;
@@ -18,9 +21,15 @@ interface PageProps {
 export default async function InvitationPage({ params }: PageProps) {
     const { token } = await params;
 
-    const guest = GUESTS.find((item) => item.token === token);
+    const { data: guest, error } = await supabaseServer
+        .from("guests")
+        .select("id, token, name, guest_count, confirmed, confirmed_count")
+        .eq("token", token)
+        .single();
 
-    if (!guest) {
+    if (error || !guest) {
+        console.error("Error buscando invitado:", error);
+
         return (
             <main className="flex min-h-screen items-center justify-center">
                 <p>Invitación no encontrada</p>
@@ -36,10 +45,15 @@ export default async function InvitationPage({ params }: PageProps) {
             <EventDetails />
             <Countdown />
             <DressCode />
+
             <GuestInvitation
                 guestName={guest.name}
-                guestCount={guest.guestCount}
+                guestCount={guest.guest_count}
+                guestToken={guest.token}
+                initiallyResponded={guest.confirmed !== null}
+                initialConfirmedCount={guest.confirmed_count}
             />
+
             <FinalMessage />
         </main>
     );
